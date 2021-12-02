@@ -334,7 +334,9 @@ button {
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
-    word-wrap: break-word;
+    width: 100%;
+    white-space: normal;
+    /*    word-wrap: break-word; */
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
@@ -595,14 +597,14 @@ h2 {
 /*    color: #5671ae; */
     color: #000;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, lucida_sans_unicoderegular, coolveticaregular;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     margin-top: 0;
 }
 h3 {
     color: #000;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, lucida_sans_unicoderegular, coolveticaregular;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 3px;
 }
 h4 {
@@ -619,6 +621,11 @@ h5 {
     font-size: 16px;
     margin-top: 2px;
 }
+
+tt {
+	    font-family: "Spleen 8x16", spleen_8x16medium;
+}
+
 data {
     margin-top: 5px;
     color: #191970;
@@ -634,6 +641,7 @@ data {
   background-color: white;
   color: black;
   border: 1px solid black;
+  text-align: right;
 }
 
 #banner {
@@ -642,14 +650,18 @@ data {
     margin-top: 10px;
     margin-left: 10px;
 }
+
 @font-face {
-    font-family: Lucida Grande Regular;
+	font-family: lucida_granderegular;
+	src: url(../fonts/lucida_grande-webfont.woff) format('woff');
 }
+
 @font-face {
-    font-family: Lucida Sans Unicode;
+	font-family: lucida_sans_unicoderegular;
+	src: url(../fonts/lucida_sans_unicode-webfont.woff) format('woff');
 }
 
 @font-face {
     font-family: spleen_8x16medium;
-    src: url(https://raw.githubusercontent.com/luiztheblues/luiztheblues.github.io/f821a6b5e0a7a1f378121e0093678e327e406508/source_files/pindorama-www-sources/spleen-8x16-webfont.woff) format('woff');
+    src: url(../fonts/spleen-8x16-webfont.woff) format('woff');
 }
