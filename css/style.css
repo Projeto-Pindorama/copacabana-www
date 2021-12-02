@@ -643,19 +643,13 @@ data {
     margin-left: 10px;
 }
 @font-face {
-    font-family: lucida_granderegular;
-    src: url(https://raw.githubusercontent.com/luiztheblues/luiztheblues.github.io/f821a6b5e0a7a1f378121e0093678e327e406508/source_files/pindorama-www-sources/lucida_grande-webfont.woff) format('woff');
+    font-family: Lucida Grande Regular;
 }
 @font-face {
-    font-family: lucida_sans_unicoderegular;
-    src: url(https://raw.githubusercontent.com/luiztheblues/luiztheblues.github.io/f821a6b5e0a7a1f378121e0093678e327e406508/source_files/pindorama-www-sources/coolvetica_rg-webfont.woff) format('woff');
+    font-family: Lucida Sans Unicode;
 }
+
 @font-face {
     font-family: spleen_8x16medium;
     src: url(https://raw.githubusercontent.com/luiztheblues/luiztheblues.github.io/f821a6b5e0a7a1f378121e0093678e327e406508/source_files/pindorama-www-sources/spleen-8x16-webfont.woff) format('woff');
 }
-@font-face {
-    font-family: coolveticaregular;
-    src: url(https://raw.githubusercontent.com/luiztheblues/luiztheblues.github.io/f821a6b5e0a7a1f378121e0093678e327e406508/source_files/pindorama-www-sources/coolvetica_rg-webfont.woff) format('woff');
-}
-
