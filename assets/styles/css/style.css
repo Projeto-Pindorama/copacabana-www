@@ -1,0 +1,46 @@
+*{
+    box-sizing: unset;
+}
+
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* Styles required only for the example above */
+.scrollspy-example {
+    position: relative;
+    height: 100%;
+}
+.header-links-direita a{
+    font-size: 20px;
+    margin-right: 1rem;
+    color: #4D4D4F;
+}
+#scrollspy1{
+    height: 100%;
+    border-right: solid #cacaca;
+}
+#scrollspy1 li{
+    margin-left: 1rem;
+}
+.tab-logo{
+    max-width: 100px;
+}
+.title-light{
+    background-color: blue;
+}
+/* aqui tu adiciona oq tu quer que mude de 768 pra cima*/
+@media (min-width: 768px){
+    *{
+        box-sizing: border-box;
+    }
+    .tab-logo{
+        max-width: 200px;
+    }
+}
+/* aqui tu adiciona oq tu quer que mude de 992 pra cima*/
+@media (min-width: 992px){
+    .tab-logo{
+        max-width: 250px;
+    }
+}
