@@ -1,3 +1,18 @@
+@font-face {
+    font-family: lucida_granderegular;
+    src: url(/assets/styles/fonts/lucida_grande-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: lucida_sans_unicoderegular;
+    src: url(/assets/styles/fonts/lucida_sans_unicode-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: spleen_8x16medium;
+    src: url(/assets/styles/fonts/spleen-8x16-webfont.woff) format('woff');
+}
+
 *{
     box-sizing: unset;
 }
@@ -5,7 +20,35 @@
 html, body{
     max-width: 100%;
     overflow-x: hidden;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, lucida_sans_unicoderegular, coolveticaregular;
 }
+
+.footer-text{
+    text-align: right;
+}
+
+tt {
+    font-family: "Spleen 8x16", spleen_8x16medium;
+}
+
+a {
+    color: #6566a0;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+h2 { 
+    font-weight: bold;
+}
+
+h2, h3, h4, h5, p, li, figure {
+    color: black;
+}
+
 /* Styles required only for the example above */
 .scrollspy-example {
     position: relative;
@@ -27,8 +70,11 @@ html, body{
     max-width: 100px;
 }
 .title-light{
-    background-color: blue;
+		/* Pindorama's blue */
+    background-color: #1A3060;
+    color: #ffffff;
 }
+
 /* aqui tu adiciona oq tu quer que mude de 768 pra cima*/
 @media (min-width: 768px){
     *{
@@ -38,6 +84,7 @@ html, body{
         max-width: 200px;
     }
 }
+
 /* aqui tu adiciona oq tu quer que mude de 992 pra cima*/
 @media (min-width: 992px){
     .tab-logo{
