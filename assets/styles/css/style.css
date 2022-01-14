@@ -30,7 +30,10 @@ html, body{
 tt {
     font-family: "Spleen 8x16", spleen_8x16medium;
 }
-
+p{
+    margin-bottom: 0!important;
+    margin-top: 0.5rem!important;
+}
 a {
     color: #6566a0;
     text-decoration: none;
