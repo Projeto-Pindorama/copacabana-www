@@ -48,8 +48,13 @@ h2 {
     font-weight: bold;
 }
 
-h2, h3, h4, h5, p, li, figure {
+h2, h3, h4, h5, p, li, dt, dd, figure {
     color: black;
+}
+
+dl {
+  display: block;
+  list-style-type: circle;
 }
 
 h4 {
