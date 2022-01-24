@@ -14,7 +14,7 @@
 }
 
 *{
-    box-sizing: unset;
+    box-sizing: border-box;
 }
 
 html, body{
@@ -71,12 +71,24 @@ h4 {
     margin-right: 1rem;
     color: #4D4D4F;
 }
+#sidebar-btn {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    box-shadow: none;
+    text-align: center;
+}
 #scrollspy1{
     height: 100%;
     border-right: solid #cacaca;
 }
-#scrollspy1 li{
-    margin-left: 1rem;
+#scrollspy1 li {
+    width: 100%;
+    font-size: .75em;
+}
+#scrollspy1 a {
+    font-size: .75em;
 }
 .tab-logo{
     max-width: 100px;
@@ -87,13 +99,34 @@ h4 {
     color: #ffffff;
 }
 
+/* aqui tu adiciona oq tu quer que mude de 576 pra baixo*/
+@media (max-width: 576px){
+    #sidebar-btn {
+        display: block;
+    }
+    #scrollspy1{
+        border-right: none;
+    }
+    #scrollspy1 li {
+        width: 100%;
+        font-size: 1em;
+    }
+    #scrollspy1 a {
+        font-size: .865em;
+    }
+}
+
 /* aqui tu adiciona oq tu quer que mude de 768 pra cima*/
 @media (min-width: 768px){
-    *{
-        box-sizing: border-box;
-    }
     .tab-logo{
         max-width: 200px;
+    }
+    #scrollspy1 li {
+        width: 100%;
+        font-size: 1em;
+    }
+    #scrollspy1 a {
+        font-size: .865em;
     }
 }
 
