@@ -26,20 +26,20 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- Container wrapper -->
-      <div class="container">
+      <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand me-2" href="https://copacabana.pindorama.dob.jp/">
           copacabana.pindorama.dob.jp
         </a>
 
         <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
-          aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbar"
+          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
 
         <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <div class="navbar-collapse" id="navbar">
           <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -48,13 +48,16 @@
           </ul>
           <!-- Left links -->
 
-          <div class=" header-links-direita d-flex align-items-center">
+          <div class=" header-links-direita d-flex flex-column flex-sm-row align-items-center">
             <a href=""> <strong> About</strong></a>
             <a href="https://get.pindorama.dob.jp/copacabana/"><strong>Download</strong></a>
             <a href="https://copacabana.pindorama.dob.jp/servers.html"><strong>Servers</strong></a>
             <a href="https://www.freelists.org/list/pindorama"><strong>Maillists</strong></a>
             <a href="https://silicon.copacabana.pindorama.dob.jp/"><strong>Documentation</strong></a>
-            <a class="dropdown-item" href="./indexptbr.html"><i class="brazil flag"></i></a>
+            <div class="d-flex flags">
+              <a class="dropdown-item" href="./"><i class="us flag"></i></a>
+              <a class="dropdown-item" href="./indexptbr.html"><i class="brazil flag"></i></a>
+            </div>
           </div>
         </div>
         <!-- Collapsible wrapper -->
@@ -311,12 +314,17 @@
 
   <!-- Checks if the user is using a mobile device -->
   <script>
-    const pindoramaSidebar = document.querySelector('#sidebar');
+    const pindoramaNavbar = document.querySelector("#navbar");
+    const pindoramaSidebar = document.querySelector("#sidebar");
+
+    if (pindoramaNavbar) {
+      pindoramaNavbar.classList.add("collapse");
+    }
 
     if (window.innerWidth <= 576) {
-      pindoramaSidebar.classList.add('collapse')
+      pindoramaSidebar.classList.add("collapse")
     } else {
-      pindoramaSidebar.classList.add('collapse-show')
+      pindoramaSidebar.classList.add("collapse-show")
     }
 
   </script>
