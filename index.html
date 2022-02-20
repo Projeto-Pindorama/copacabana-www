@@ -138,8 +138,9 @@
           <section>
             <h1 class="title-light">The light on Linux&reg;</h1>
             <div id="about" style="margin-top: 20px; margin-left:10px;">
-              <h2 id="what"><a href="#what">#</a> What?</h2>
-              <h4>Copacabana Linux, is an independent Linux&reg; distribution focused on
+              
+	      <h2 id="what"><a href="#what">#</a> What?</h2>
+	      <h4>Copacabana Linux, is an independent Linux&reg; distribution focused on
                 simplicity, sanity, modularity and liberty (as in
                 Enlightenment).<br>It is based on <a href="https://musl.libc.org">musl</a>
                 as the C standard library and a <a href="https://github.com/Projeto-Pindorama/heirloom-070715">custom and
@@ -152,7 +153,8 @@
                 based in tarball stages, not on the "everything is a package"
                 paradigm; since it's fairly simpler to package,
                 distribute and maintain.</h4>
-              <h2 id="why"><a href="#why">#</a> Why?</h2>
+              
+	      <h2 id="why"><a href="#why">#</a> Why?</h2>
               <figure>
                 <blockquote>"Competition is good, principally if it's offering more
                   freedom."<br>
@@ -168,10 +170,26 @@
                 userland + Linux kernel".<br> We also never liked the community model that
                 most distributions follow; that are the main reasons why
                 we're here.</h4>
-              <h2 id="how"><a href="#how">#</a> How?</h2>
-              <h4></h4>
-              <h2 id="who"><a href="#who">#</a> Who?</h2>
-              <h3><b><span style="color: #6566a0">##</span> Directly related with the distribution</b></h3>
+              
+	      <h2 id="how"><a href="#how">#</a> How?</h2>
+              <h4>Copacabana is made following the same building model that
+		      Linux from Scratch/Musl-LFS follows, that is building the
+	      distribution in three parts: a cross-compiler; a set of basic
+	      tools and the final system, explaining it in a much more
+	      simplified form.<br/>But, while Linux from Scratch
+	      don't in fact have a build consolidation – just plain
+	      instructions – Copacabana makes use of tools to automatize the
+	      process of mounting disks and entering in the final system stage
+	      with <tt>chroot</tt>, which are L.E.<tt>mount</tt> (this in
+	      specific is also present in the final system) and Mitzune, along
+	      with another set of small Shell script hacks present at the
+	      <tt>cmd/</tt> directory in the <tt>git</tt> repository.<br />
+	      If you're interested in building from scratch and/or porting
+	      Copacabana for other architecture, please read <a href="#chip-in">
+	      "Porting Copacabana to other architectures"</a>.</h4>
+
+	      <h2 id="who"><a href="#who">#</a> Who?</h2>
+	      <h3><b><span style="color: #6566a0">##</span> Directly related with the distribution</b></h3>
               <ul>
                 <li>Luiz A. Rangel (<tt>takusuman</tt>), for the most part of the work; <a
                     href="https://github.com/Projeto-Pindorama/lemount">L.E.<tt>mount</tt></a>; <a
@@ -180,7 +198,8 @@
                 <li>Caio Yoshimura (<tt>caioyoshimura</tt>), for some hacking in scripts and the Vim dotfile for ones
                   who want to code for the project</li>
               </ul>
-              <h3><b><span style="color: #6566a0">##</span> WWW infrastructure</b></h3>
+              
+	      <h3><b><span style="color: #6566a0">##</span> WWW infrastructure</b></h3>
               <ul>
                 <li>Vitor S. Almeida (<tt>vit0rr</tt>), for programming
                   <a href="https://web.archive.org/web/20220113063617/https://copacabana.pindorama.dob.jp/">the original
@@ -202,15 +221,14 @@
                     the graphics-related work</a>. Seriously, the distribution and the project itself wouldn't even have
                   a logo if it wasn't him.</li>
               </ul>
-              <h3><b><span style="color: #6566a0">##</span> Honorable mentions</b></h3>
+              
+	      <h3><b><span style="color: #6566a0">##</span> Honorable mentions</b></h3>
 	      <ul>
-		      <li>Linus Benedict Torvalds (<tt>torvalds</tt>) and <a
-				      href="https://github.com/torvalds/linux/blob/master/CREDITS">all
-			      the folks
-			      that contributed</a> for Linux, <b><u>the</u></b> Great and free Unix
+		      <li>Linus Benedict Torvalds (<tt>torvalds</tt>) for
+			      creating Linux®, <b><u>the</u></b> Great and free Unix
 			      clone for 386/486-based machines (<a
-			      href="https://github.com/torvalds/linux/tree/master/arch">and some more
-			      architectures nowadays</a>);</li>
+			      href="https://github.com/torvalds/linux/tree/master/arch">and
+			      some more architectures nowadays</a>);</li>
 		      <li>Rich Felker (<tt>richfelker</tt>) for the glorious
 			      musl libc;</li>
 		      <li>Theo de Raadt (<tt>deraadt</tt>) for creating the
@@ -218,35 +236,66 @@
 			      for porting part of its userland for Linux (so-called
 			      "lobase");</li>
 		      <li>Caldera, Inc. and Sun Microsystems, Inc. for releasing
-		      UNIX® System V and Solaris (in case of Sun) components under
-		      free software licences, Bell Labs for releasing Plan 9 (more
-		      specifically <tt>troff</tt>) under an open source licence,
-		      and Gunnar Ritter (<tt>gunnarr(at)acm(dot)org</tt>) for unifing
-		      and portabilizing (or even rewriting some from scratch) these
-		      components for other UNIXes (so-called "Heirloom Toolchest");</li>
-		      <li></li>
+		      UNIX® System V and Solarisi® components under free software
+		      licences, Bell Labs for releasing Plan 9 (more specifically
+		      <tt>troff</tt>) under an open source licence (LPL), and
+		      Gunnar Ritter (<tt>gunnarr(at)acm(dot)org</tt>) for
+		      unifying and portabilizing (and even rewriting some from
+		      scratch) these components for other UNIXes (so-called
+		      "Heirloom Toolchest");</li>
+		      <li>Gerard Beekmans et al. for writing "Linux from
+			      Scratch";</li>
+		      <li>Derrick (<tt>dslm4515</tt>) for creating Musl-LFS,
+			      which is basically Linux From Scratch, but using
+			      saner components such as musl libc, LibreSSL,
+			      gettext-tiny and S6+S6-rc instead of systemd etc.
+			      It is our theorical base for building the
+			      distribution, and we're also cooperating with him
+		      	      for Musl-LFS development itself;</li>
+		      <li>Alpine, Void and Musl-LFS for patches, which fix
+			      some software for building and linking with musl libc;</li>
 		      <li>Ryan Woodsmall (<tt>ryanwoodsmall</tt>) for initially
 		      patching Heirloom Toolchest for working with musl libc,
 		      which eventually would serve as an initial base for
-		      Copacabana patches for Toolchest and Doctools;</li>
+		      Copacabana patches for Toolchest and Doctools.</li>
 	      </ul>
+	      
 	      <h2 id="chip-in"><a href="#chip-in">#</a> Chip in!</h2>
               <h4>We can't do this alone. Here are ways of how can
                 <u>you</u> chip in.
               </h4>
-              <h3><b><span style="color: #6566a0">##</span> Translate
+              
+	      <h3><b><span style="color: #6566a0">##</span> Translate
                   our content</b></h3>
-              <h4>Speaks something besides the King's English? Português? Español? Italiano? Français? Suomi? 日本語? 繁體字?
-                עברית?<br />Chip in to
-                internationalize our software and
-                documentation!<br />
+              <h4>Speaks something besides the King's English? Português? Español?
+		Italiano? Français? Suomi? 日本語? 繁體字? עברית?<br />
+		Chip in to internationalize our software and documentation!<br />
                 Everything is public in our repositories. Yeah,
                 that's right: no closed groups, sub-projects
                 nor mailing lists.<br />
                 It's just translate and pull request your translation.</h4>
-	      <h3><b><span style="color: #6566a0">##</span> Port Copacabana to
+
+	      <h3><b><span style="color: #6566a0">##</span> Porting Copacabana to
 			      other architectures</b></h3>
-	      <img src="./assets/styles/img/porting_432x333.png">
+	      <h4>Copacabana main focus is to be a multi-purpose Linux-based and UNIX-compatible
+	      operating system and, after all, to be running in multiple places
+	      over the World.<br />And <u>you</u> can help us to achieve this
+	      porting Copacabana to other architectures.<br />
+	      <h4>Currently, Copacabana is getting binary releases for x64; our
+		      current goal is to get binary releases for ARM and i386
+		      (x86) architectures.</h4>
+	      <figure>
+	      	<img src="./assets/styles/img/porting_432x333.png">
+	      </figure>
+	      <h4>Recompiling Copacabana for another host isn't something extremely
+	      hard, since, besides all the scripts and patches are open at the
+	      <tt>git</tt> repository, the process itself is being described in
+	      more depth at the <a
+		      href="https://silicon.pindorama.dob.jp/copacabana">
+		      Copacabana Tabula</a>, with additional sidenotes and
+	      trouble shooting.<br />If you've made a port, you can announce it
+	      at the Pindorama mailing list at FreeLists.org.</h4>
+	      
 	      <h3><b><span style="color: #6566a0">##</span> Spread the word around!</b></h3>
               <h4>We strongly encourage that you use these badges freely, both in the 'net
                 or in the real life.</h4>
@@ -283,9 +332,11 @@
                   <h4>Have you been using some of them? <a
                       href="https://github.com/Projeto-Pindorama/copacabana/issues">Tell
                       us about</a>.</h4>
-                  <h2 id="media"><a href="#media">#</a> On the media!</h2>
+              
+		  <h2 id="media"><a href="#media">#</a> On the media!</h2>
                   <h4>Sometimes we get media coverage, take a look.</h4>
-                  <h3><b><span style="color: #6566a0">##</span> January 2022</b></h3>
+                  
+		  <h3><b><span style="color: #6566a0">##</span> January 2022</b></h3>
                     <li><a href="https://www.youtube.com/watch?v=Q-X7cPsuPlE"><i>Conheça o projeto #Pindorama</i></a>,
                       Toca do Tux, 23th January 2022</li>
                     <h4>The professor and systems administrator Gabriel Silveira interviews Luiz Antônio about the
