@@ -9,8 +9,8 @@
 }
 
 @font-face {
-    font-family: spleen_8x16medium;
-    src: url(/assets/styles/fonts/spleen-8x16-webfont.woff) format('woff');
+    font-family: courierprime-regular;
+    src: url(/assets/styles/fonts/courierprime-regular-webfont.woff) format('woff');
 }
 
 *{
@@ -28,7 +28,7 @@ html, body{
 }
 
 tt {
-    font-family: "Spleen 8x16", spleen_8x16medium;
+    font-family: "Courier Prime", courierprime-regular, "Courier New", monospace;
 }
 p{
     margin-bottom: 0!important;
