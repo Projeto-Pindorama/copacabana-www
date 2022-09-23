@@ -143,9 +143,8 @@
 	      <h4>Copacabana Linux, is an independent Linux&reg; distribution focused on
                 sanity, modularity and liberty (as in Enlightenment).<br>
 		It is based on <a href="https://musl.libc.org">musl</a> as the C standard
-		library and some <a href="https://github.com/Projeto-Pindorama/stripped-lobase">
-		customized and modern OpenBSD utilities</a> as UNIX&reg;-compatible basic command
-		line utilities.<br>
+		library and <a href="https://github.com/Projeto-Pindorama/heirloom-ng">
+		Heirloom NG</a> as UNIX&reg;-compatible basic command line utilities.<br>
                 It uses a *BSD-inspired distribution model, based on stages, not on the "everything
 		is a package" paradigm; since it's fairly simpler to package, distribute and
 		maintain.<br>It aims to be a complete, malleable and at the same time simple
@@ -180,7 +179,7 @@
 	      with <tt>chroot</tt>, which are L.E.<tt>mount</tt> (this in
 	      specific is also present in the final system) and Mitzune, along
 	      with another set of small Shell script hacks present at the
-	      <tt>cmd/</tt> directory in the <tt>git</tt> repository.<br />
+	      <tt>cmd/</tt> directory in the git repository.<br />
 	      If you're interested in building from scratch and/or porting
 	      Copacabana for other architecture, please read <a href="#chip-in">
 	      "Porting Copacabana to other architectures"</a>.</h4>
@@ -188,12 +187,15 @@
 	      <h2 id="who"><a href="#who">#</a> Who?</h2>
 	      <h3><b><span style="color: #6566a0">##</span> Directly related with the distribution</b></h3>
               <ul>
-                <li>Luiz Antônio (<tt>takusuman</tt>), for the most part of the work; <a
-                    href="https://github.com/Projeto-Pindorama/lemount">L.E.<tt>mount</tt></a>; <a
-                    href="https://github.com/Projeto-Pindorama/mitzune">Mitzune</a>; building; maintaining and writing
+                <li>Luiz Antônio (<tt>takusuman</tt>), for the most part of the
+			   work, <a
+                    href="https://github.com/Projeto-Pindorama/lemount">L.E.<tt>mount</tt></a>, <a
+                    href="https://github.com/Projeto-Pindorama/mitzune">Mitzune</a>,  building, maintaining and writing
                   documentation</li>
                 <li>Caio Yoshimura (<tt>caioyoshimura</tt>), for some hacking in scripts and the Vim dotfile for ones
                   who want to code for the project</li>
+		<li>Arthur Bacci (<tt>arthurbacci</tt>), for contributions on
+			Heirloom NG.</li>
               </ul>
               
 	      <h3><b><span style="color: #6566a0">##</span> WWW infrastructure</b></h3>
@@ -223,10 +225,6 @@
 			      some more architectures nowadays</a>);</li>
 		      <li>Rich Felker (<tt>richfelker</tt>) for the glorious
 			      musl libc;</li>
-		      <li>Theo de Raadt (<tt>deraadt</tt>) for creating the
-			      OpenBSD project and Duncan Overbruck (<tt>Duncaen</tt>)
-			      for porting part of its userland for Linux (so-called
-			      "lobase");</li>
 		      <li>Caldera, Inc. and Sun Microsystems, Inc. for releasing
 		      UNIX® System V and Solarisi® components under free software
 		      licences, Bell Labs for releasing Plan 9 (more specifically
@@ -282,10 +280,9 @@
 	      </figure>
 	      <h4>Recompiling Copacabana for another host isn't something extremely
 	      hard, since, besides all the scripts and patches are open at the
-	      <tt>git</tt> repository, the process itself is being described in
-	      more depth at the <a
-		      href="https://silicon.pindorama.dob.jp/copacabana">
-		      Copacabana <i>tabula</i></a>, with additional sidenotes and
+	      git repository, the process itself is being described in more depth at the
+	      <a href="https://silicon.pindorama.dob.jp/copacabana">
+		      Copacabana tabula</a>, with additional sidenotes and
 	      troubleshooting.<br />If you've made a port, you can announce it
 	      at the Pindorama mailing list at FreeLists.org.</h4>
 	      
