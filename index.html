@@ -75,9 +75,6 @@
               <a class="nav-link" href="#what">What?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#why">Why?</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#how">How?</a>
             </li>
             <li class="nav-item">
@@ -142,59 +139,41 @@
               
 	      <h2 id="what"><a href="#what">#</a> What?</h2>
 	      <h4>Copacabana Linux, is an independent Linux&reg; distribution focused on
-                sanity, modularity and liberty (as in Enlightenment).<br>
+		sanity, modularity and liberty (as in Enlightenment).<br>
+		It aims to be a complete, malleable and simple operating system solution
+		for use in many environments like workstations, laptops and servers.<br />
 		It is based on <a href="https://musl.libc.org">musl</a> as the C standard
 		library and <a href="https://github.com/Projeto-Pindorama/heirloom-ng">
-		Heirloom NG</a> as UNIX&reg;-compatible basic command line utilities.<br>
-                It uses a *BSD-inspired distribution model, based on stages, not on the "everything
-		is a package" paradigm; since it's fairly simpler to package, distribute and
-		maintain.<br>It aims to be a complete, malleable and at the same time simple
-		operating system solution for use in workstations, laptops and servers, like
-		UNIX&reg; used to be in its "golden years".</h4>
-             	 
-	      <h2 id="why"><a href="#why">#</a> Why?</h2>
-              <figure>
-                <blockquote>"Competition is good, principally if it's offering more
-                  freedom."<br>
-                </blockquote>
-                <figcaption>
-                  - Luiz Antônio (<tt>takusuman</tt>), in <a
-                    href="https://github.com/takusuman/uberports#why"><tt>uberports</tt></a>' manual
-                </figcaption>
-              </figure>
-              <h4>We always thought that brazilian distributions weren't exactly
-                neither original nor independent, since all of them are dependent on
-                other Linux&reg; distributions, or just do the same bread-and-butter of "GNU
-                userland + Linux&reg; kernel".<br> We also never liked the community model that
-                most distributions follow; that are the main reasons why we're here.</h4>
-              
+		Heirloom NG</a> as UNIX&reg;-compatible basic command line utilities.<br><br>
+                It uses a *BSD-inspired distribution model &#8212; based on stages, not on the
+		"everything is a package" paradigm &#8212; since it's fairly simpler to package,
+		distribute and maintain.<h4>
 	      <h2 id="how"><a href="#how">#</a> How?</h2>
               <h4>Copacabana is made following the same building model that
 		      Linux from Scratch/Musl-LFS follows, that is building the
 	      distribution in three parts: a cross-compiler; a set of basic
 	      tools and the final system, explaining it in a much more
 	      simplified form.<br/>But, while Linux from Scratch
-	      don't in fact have a build consolidation – just plain
-	      instructions – Copacabana makes use of tools to automatize the
-	      process of mounting disks and entering in the final system stage
-	      with <tt>chroot</tt>, which are L.E.<tt>mount</tt> (this in
-	      specific is also present in the final system) and Mitzune, along
-	      with another set of small Shell script hacks present at the
-	      <tt>cmd/</tt> directory in the git repository.<br />
+	      don't in fact have a build consolidation, Copacabana makes use of
+	      tools to automatize the process of mounting disks and entering in
+	      the final system stage with <tt>chroot</tt>, along with another set
+	      of small Shell script hacks present at the <tt>cmd/</tt> directory
+	      in the git repository.<br />
 	      If you're interested in building from scratch and/or porting
 	      Copacabana for other architecture, please read <a href="#chip-in">
 	      "Porting Copacabana to other architectures"</a>.</h4>
 
 	      <h2 id="who"><a href="#who">#</a> Who?</h2>
-	      <h3><b><span style="color: #6566a0">##</span> Directly related with the distribution</b></h3>
+	      <h3><b><span style="color: #6566a0">##</span> Developers</b></h3>
               <ul>
-                <li>Luiz Antônio (<tt>takusuman</tt>), for the most part of the
-			   work, <a
-                    href="https://github.com/Projeto-Pindorama/lemount">L.E.<tt>mount</tt></a>, <a
+                <li>Luiz Antônio (<tt>takusuman</tt>), for leading the project,
+			writing <a
+                    href="https://github.com/Projeto-Pindorama/lemount">L.E.<tt>mount</tt></a>
+			and <a
                     href="https://github.com/Projeto-Pindorama/mitzune">Mitzune</a>,  building, maintaining and writing
-                  documentation</li>
+                  documentation.</li>
                 <li>Caio Yoshimura (<tt>caioyoshimura</tt>), for some hacking in scripts and the Vim dotfile for ones
-                  who want to code for the project</li>
+                  who want to code for the project.</li>
 		<li>Arthur Bacci (<tt>arthurbacci</tt>), for contributions on
 			Heirloom NG.</li>
               </ul>
@@ -203,12 +182,11 @@
               <ul>
                 <li>Vitor S. Almeida (<tt>vit0rr</tt>), for programming
                   <a href="https://web.archive.org/web/20220113063617/https://copacabana.pindorama.dob.jp/">the original
-                    website</a> and helping me to maintain it;
+                    website</a> and helping us to maintain it.
                 </li>
                 <li>Leonardo Rafael (<tt>ileonardohe4rt💜</tt>), for completely
                   rewriting the website with mdbootstrap in 12th
-                  January 2022;</li>
-                <li>Luiz Antônio (<tt>takusuman</tt>), for being the webmaster;</li>
+                  January 2022.</li>
               </ul>
               <h3><b><span style="color: #6566a0">##</span> Artistic work</b></h3>
               <ul>
@@ -223,32 +201,23 @@
 			      creating Linux®, <b><u>the</u></b> Great and free
 			      UNIX&reg; clone for 386/486-based machines (<a
 			      href="https://github.com/torvalds/linux/tree/master/arch">and
-			      some more architectures nowadays</a>);</li>
+			      some more architectures nowadays</a>).</li>
 		      <li>Rich Felker (<tt>richfelker</tt>) for the glorious
-			      musl libc;</li>
+			      musl C library.</li>
 		      <li>Caldera, Inc. and Sun Microsystems, Inc. for releasing
-		      UNIX® System V and Solaris® components under free software
-		      licences, Bell Labs for releasing Plan 9 (more specifically
-		      <tt>troff</tt>) under an open source licence (LPL), and
-		      Gunnar Ritter (<tt>gunnarr(at)acm(dot)org</tt>) for
+		      UNIX® System V and Solaris® and Bell Labs for releasing Plan 9
+		      components under free software licences, and Gunnar Ritter for
 		      unifying and portabilizing (and even rewriting some from
-		      scratch) these components for other UNIXes (so-called
-		      "Heirloom Toolchest");</li>
+		      scratch) these components for other UNIXes via the 
+		      Heirloom Toolchest.</li>
 		      <li>Gerard Beekmans et al. for writing "Linux from
-			      Scratch";</li>
+			      Scratch".</li>
 		      <li>Derrick (<tt>dslm4515</tt>) for creating Musl-LFS,
 			      which is basically Linux From Scratch, but using
-			      saner components such as musl libc, LibreSSL,
-			      gettext-tiny and S6+S6-rc instead of systemd etc.
-			      It is our theorical base for building the
-			      distribution, and we're also cooperating with him
-		      	      for Musl-LFS development itself;</li>
+			      saner components.</li>
 		      <li>Alpine, Void and Musl-LFS for patches, which fix
-			      some software for building and linking against musl libc;</li>
-		      <li>Ryan Woodsmall (<tt>ryanwoodsmall</tt>) for initially
-		      patching Heirloom Toolchest for working with musl libc,
-		      which eventually would serve as an initial base for
-		      Copacabana patches for Toolchest and Doctools.</li>
+			      some software for building and linking against
+			      musl C library.</li>
 	      </ul>
 	      
 	      <h2 id="chip-in"><a href="#chip-in">#</a> Chip in!</h2>
