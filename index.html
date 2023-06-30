@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head></head>
+<head>
+	<script type="text/javascript"
+		src="./assets/scripts/fetch_gh_api.js">
+	</script>
+</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Copacabana</title>
@@ -17,7 +21,7 @@
 <link rel="shortcut icon" href="./assets/styles/img/icon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body onload="getNewestRelease();">
   <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -77,7 +81,7 @@
               <a class="nav-link" href="#how">How?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#who">Who?</a>
+              <a class="nav-link" href="#copy">Download a copy</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#chip-in">Chip in!</a>
@@ -138,7 +142,9 @@
               
 	      <h2 id="what"><a href="#what">#</a> What?</h2>
 	      <h4>Copacabana Linux, is an independent Linux&reg; distribution focused on
-		sanity, modularity and liberty (as in Enlightenment).<br>
+		sanity, modularity and <a 
+		href="https://revolution.chnm.org/exhibits/show/liberty--equality--fraternity/enlightenment-and-human-rights">
+		liberty (as in Enlightenment)</a>.<br>
 		It aims to be a complete, malleable and simple operating system solution
 		for use in many environments like workstations, laptops and servers.<br />
 		It is based on <a href="https://musl.libc.org">musl</a> as the C standard
@@ -159,66 +165,33 @@
 	      of small Shell script hacks present at the <tt>cmd/</tt> directory
 	      in the git repository.<br />
 	      If you're interested in building from scratch and/or porting
-	      Copacabana for other architecture, please read <a href="#chip-in">
-	      "Porting Copacabana to other architectures"</a>.</h4>
+	      Copacabana for other architecture, please read
+	      "<a href="#chip-in">Porting Copacabana to other
+	      architectures</a>".</h4>
 
-	      <h2 id="who"><a href="#who">#</a> Who?</h2>
-	      <h3><b><span style="color: #6566a0">##</span> Developers</b></h3>
-              <ul>
-                <li>Luiz Antônio (<tt>takusuman</tt>), for leading the project,
-			writing <a
-                    href="https://github.com/Projeto-Pindorama/lemount">L.E.<tt>mount</tt></a>
-			and <a
-                    href="https://github.com/Projeto-Pindorama/mitzune">Mitzune</a>,  building, maintaining and writing
-                  documentation.</li>
-                <li>Caio Yoshimura (<tt>caioyoshimura</tt>), for some hacking in scripts and the Vim dotfile for ones
-                  who want to code for the project.</li>
-		<li>Arthur Bacci (<tt>arthurbacci</tt>), for contributions on
-			Heirloom NG.</li>
-              </ul>
-              
-	      <h3><b><span style="color: #6566a0">##</span> WWW infrastructure</b></h3>
-              <ul>
-                <li>Vitor S. Almeida (<tt>vit0rr</tt>), for programming
-                  <a href="https://web.archive.org/web/20220113063617/https://copacabana.pindorama.dob.jp/">the original
-                    website</a> and helping us to maintain it.
-                </li>
-                <li>Leonardo Rafael (<tt>ileonardohe4rt💜</tt>), for completely
-                  rewriting the website with mdbootstrap in 12th
-                  January 2022.</li>
-              </ul>
-              <h3><b><span style="color: #6566a0">##</span> Artistic work</b></h3>
-              <ul>
-                <li>Kayo Henrique (<tt>Tamboru</tt>), for <a href="https://github.com/Projeto-Pindorama/artworks">all
-                    the graphics-related work</a>. Seriously, the distribution and the project itself wouldn't even have
-                  a logo if it wasn't him.</li>
-              </ul>
-              
-	      <h3><b><span style="color: #6566a0">##</span> Honorable mentions</b></h3>
-	      <ul>
-		      <li>Linus Benedict Torvalds (<tt>torvalds</tt>) for
-			      creating Linux®, <b><u>the</u></b> Great and free
-			      UNIX&reg; clone for 386/486-based machines (<a
-			      href="https://github.com/torvalds/linux/tree/master/arch">and
-			      some more architectures nowadays</a>).</li>
-		      <li>Rich Felker (<tt>richfelker</tt>) for the glorious
-			      musl C library.</li>
-		      <li>Caldera, Inc. and Sun Microsystems, Inc. for releasing
-		      UNIX® System V and Solaris® and Bell Labs for releasing Plan 9
-		      components under free software licences, and Gunnar Ritter for
-		      unifying and portabilizing (and even rewriting some from
-		      scratch) these components for other UNIXes via the 
-		      Heirloom Toolchest.</li>
-		      <li>Gerard Beekmans et al. for writing "Linux from
-			      Scratch".</li>
-		      <li>Derrick (<tt>dslm4515</tt>) for creating Musl-LFS,
-			      which is basically Linux From Scratch, but using
-			      saner components.</li>
-		      <li>Alpine, Void and Musl-LFS for patches, which fix
-			      some software for building and linking against
-			      musl C library.</li>
-	      </ul>
-	      
+	      <h2 id="copy"><a href="#copy">#</a> Download a copy</h2>
+	      <h4>The newest release is <span id="newest-release"></span>,
+	      released on <span id="newest-release-date"></span>.<br />
+	      You can get its binary tarballs at <a
+		      href="http://pindorama.dob.jp">Pindorama project</a>
+	      servers, and then install following the documentation
+	      <sub>(soon)</sub>.<h4/>
+<pre>
+	<a href="http://pindorama.dob.jp/pub/Copacabana" target="_blank">
+	http://pindorama.dob.jp/pub/Copacabana</a>/X.X
+</pre>
+
+	      <h4>Or, if you like terminals:</h4>
+<pre>
+	$ lynx http://pindorama.dob.jp/pub/Copacabana/X.X
+</pre>
+		<h4>Of course, you can also clone the git repository and build
+		it from source using the build system scripts &mdash; please,
+		take a read at "<a href="#chip-in">Porting Copacabana to other
+		architectures</a>".</h4>
+<pre>
+	$ git clone -b [X.X|master] https://github.com/Projeto-Pindorama/copacabana.git
+</pre>
 	      <h2 id="chip-in"><a href="#chip-in">#</a> Chip in!</h2>
               <h4>We can't do this alone. Here are ways of how can
                 <u>you</u> chip in.
@@ -297,7 +270,7 @@
                   <h4>Have you been using some of them? <a
                       href="https://github.com/Projeto-Pindorama/copacabana/issues">Tell
                       us about</a>.</h4>
-              
+
 		  <h2 id="media"><a href="#media">#</a> On the media!</h2>
                   <h4>Sometimes we get media coverage, take a look.</h4>
                   

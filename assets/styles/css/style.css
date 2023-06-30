@@ -27,9 +27,14 @@ html, body{
     text-align: right;
 }
 
-tt {
+code, pre, tt {
     font-family: "Courier Prime", courierprime-regular, "Courier New", monospace;
 }
+
+code, pre {
+	color: #000000;
+}
+
 p{
     margin-bottom: 0!important;
     margin-top: 0.5rem!important;
