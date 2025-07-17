@@ -53,7 +53,7 @@ h2 {
     font-weight: bold;
 }
 
-h2, h3, h4, h5, p, li, figure {
+h2, h3, h4, h5, p, li, figure, small {
     color: black;
 }
 
@@ -82,7 +82,11 @@ h4 {
 #scrollspy1 li{
     margin-left: 1rem;
 }
-.tab-logo{
+.badge-preview {
+	width: 355px;
+	height: 105px;
+}
+.tab-logo {
     max-width: 100px;
 }
 .title-light{
