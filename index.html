@@ -1,368 +1,342 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-	<script type="text/javascript"
-		src="./assets/scripts/fetch_gh_api.js">
-	</script>
-</head>
+<script type="text/javascript" src=
+"./assets/scripts/fetch_gh_api.js"></script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content=
+"width=device-width, initial-scale=1.0">
 <title>Copacabana</title>
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-<!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" />
-<!--css-->
+<link href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+rel="stylesheet">
+<link href=
+"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
+rel="stylesheet">
+<link href=
+"https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+rel="stylesheet">
 <link rel="stylesheet" href="./assets/styles/css/style.css">
-<!--icon-->
-<link rel="shortcut icon" href="./assets/styles/img/icon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./assets/styles/img/icon.ico" type=
+"image/x-icon">
 </head>
-
-<body onload="getNewestRelease();">
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <!-- Container wrapper -->
-      <div class="container">
-        <!-- Navbar brand -->
-        <a class="navbar-brand me-2" href="http://copacabana.pindorama.net.br/">
-          copacabana.pindorama.net.br
-        </a>
-
-        <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
-          aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarButtonsExample">
-          <!-- Left links -->
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#"></a>
-            </li>
-          </ul>
-          <!-- Left links -->
-
-          <div class=" header-links-direita d-flex align-items-center">
-            <a href=""> <strong> About</strong></a>
-            <a href="./mirrors.html"><strong>Download</strong></a>
-            <a href="https://www.freelists.org/list/pindorama"><strong>Maillists</strong></a>
-            <a href="http://tabula.pindorama.net.br/copacabana"><strong>Documentation</strong></a>
-            <a class="dropdown-item" href="./index.ptbr.html"><i class="brazil flag"></i></a>
-          </div>
-        </div>
-        <!-- Collapsible wrapper -->
-      </div>
-      <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
-  </header>
-  <main>
-    <div class="row">
-      <div class="col-4 col-sm-3 col-md-3 col-xl-2">
-        <!-- Scrollspy -->
-        <div id="scrollspy1" class="sticky-top">
-          <ul class="nav flex-column nav-pills menu-sidebar">
-            <li class="nav-item ">
-              <img class="col-12" src="./assets/styles/img/COPACABANA/logo.png" alt="">
-            </li>
-            <li>
-              <p><i><strong>Quick info:</strong></i></p>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#what">What?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#how">How?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#copy">Download a copy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#chip-in">Chip in!</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#media">On the media!</a>
-            </li>
-            <!---->
-            <li>
-              <p><i><strong>Documentation</strong></i></p>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://copacabana.pindorama.net.br/faq/">F.A.Q</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://tabula.pindorama.net.br/">Silicon Tabula</a>
-            </li>
-            <!---->
-            <li>
-              <p><i><strong>Development</strong></i></p>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" 
-		      href="https://github.com/Projeto-Pindorama/copacabana">Repository @ Microsoft GitHub
-	      </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                href="http://tabula.pindorama.net.br/programming">Programming for
-                Copacabana (or for the Pindorama Project in general)</a>
-            </li>
-            <!---->
-            <li>
-              <p><i><strong>Lights, Copacabana and Action!</strong></i></p>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./assets/action/work.html">Workflows running with Copacabana</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./assets/action/sites.html">Websites running on top of Copacabana</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Scrollspy -->
-      </div>
-      <!--
-	       <h2> -> # Title
-	       <h3> -> ## Subtitle
-	       <p>  -> Plain text
-	      -->
-      <div class=" col-6 col-sm-8 col-md-8 col-xl-10">
-        <!-- Spied element -->
-        <div data-mdb-spy="scroll" data-mdb-target="#scrollspy1" data-mdb-offset="0" class="scrollspy-example">
-          <section>
-            <h1 class="title-light">The light on Linux&reg;</h1>
-            <div id="about" style="margin-top: 20px; margin-left:5px;
-		    margin-right:15px;">
-              
-	      <h2 id="what"><a href="#what">#</a> What?</h2>
-	      <h4>Copacabana Linux is an independent Linux&reg; distribution focused on
-		sanity, modularity and <a 
-		href="https://revolution.chnm.org/exhibits/show/liberty--equality--fraternity/enlightenment-and-human-rights">
-		liberty (as in Enlightenment)</a>.<br>
-		It aims to be a complete, malleable and simple operating system solution
-		for use in many environments like workstations, laptops and servers.<br />
-		It is based on <a href="https://musl.libc.org">musl</a> as the C standard
-		library and <a href="http://heirloom-ng.pindorama.net.br">
-		Heirloom NG</a> as UNIX&reg;-compatible basic command line utilities.<br><br>
-                It uses a *BSD-inspired distribution model &#8212; based on stages, not on the
-		"everything is a package" paradigm &#8212; since it's fairly simpler to package,
-		distribute and maintain.<h4>
-	      <h2 id="how"><a href="#how">#</a> How?</h2>
-              <h4>Copacabana is made following the same building model that
-		      Linux from Scratch/Musl-LFS follows, that is building the
-	      distribution in three parts: a cross-compiler; a set of basic
-	      tools and the final system, explaining it in a much more
-	      simplified form.<br/>But, while Linux from Scratch
-	      don't in fact have a build consolidation, Copacabana makes use of
-	      a complete, but yet rather simple and hackable,
-	      <a href="https://github.com/Projeto-Pindorama/copacabana/blob/copaclang/build.ksh">
-		      build system</a>.<br />
-	      If you're interested in building from scratch and/or porting
-	      Copacabana for other architecture, please read
-	      "<a href="#chip-in">Porting Copacabana to other
-	      architectures</a>".</h4>
-
-	      <h2 id="copy"><a href="#copy">#</a> Download a copy</h2>
-	      <h4>The newest release is <span id="newest-release"></span>,
-	      released on <span id="newest-release-date"></span>.<br />
-	      </h4>
+<!-- Font Awesome -->
+<!-- Google Fonts -->
+<!-- MDB -->
+<!--css-->
+<!--icon-->
+<body>
+<header><!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- Container wrapper -->
+<div class="container"><!-- Navbar brand -->
+ <a class="navbar-brand me-2" href=
+"http://copacabana.pindorama.net.br/">copacabana.pindorama.net.br</a>
+<!-- Toggle button -->
+ <!-- Collapsible wrapper -->
+<div class="collapse navbar-collapse" id="navbarButtonsExample">
+<!-- Left links -->
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item"><a class="nav-link" href="#"></a></li>
+</ul>
+<!-- Left links -->
+<div class="header-links-direita d-flex align-items-center">
+<a href=""><strong>About</strong></a> <a href=
+"./mirrors.html"><strong>Download</strong></a> <a href=
+"https://www.freelists.org/list/pindorama"><strong>Maillists</strong></a>
+<a href=
+"http://tabula.pindorama.net.br/copacabana"><strong>Documentation</strong></a>
+<a class="dropdown-item" href="./index.ptbr.html"></a></div>
+</div>
+<!-- Collapsible wrapper --></div>
+<!-- Container wrapper --></nav>
+<!-- Navbar --></header>
+<main>
+<div class="row">
+<div class="col-4 col-sm-3 col-md-3 col-xl-2"><!-- Scrollspy -->
+<div id="scrollspy1" class="sticky-top">
+<ul class="nav flex-column nav-pills menu-sidebar">
+<li class="nav-item"><img class="col-12" src=
+"./assets/styles/img/COPACABANA/logo.png" alt=""></li>
+<li>
+<p><i><strong>Quick info:</strong></i></p>
+</li>
+<li class="nav-item"><a class="nav-link" href=
+"#what">What?</a></li>
+<li class="nav-item"><a class="nav-link" href="#how">How?</a></li>
+<li class="nav-item"><a class="nav-link" href="#copy">Download a
+copy</a></li>
+<li class="nav-item"><a class="nav-link" href="#chip-in">Chip
+in!</a></li>
+<li class="nav-item"><a class="nav-link" href="#media">On the
+media!</a></li>
+<!---->
+<li>
+<p><i><strong>Documentation</strong></i></p>
+</li>
+<li class="nav-item"><a class="nav-link" href=
+"http://copacabana.pindorama.net.br/faq/">F.A.Q</a></li>
+<li class="nav-item"><a class="nav-link" href=
+"http://tabula.pindorama.net.br/">Silicon Tabula</a></li>
+<!---->
+<li>
+<p><i><strong>Development</strong></i></p>
+</li>
+<li class="nav-item"><a class="nav-link" href=
+"https://github.com/Projeto-Pindorama/copacabana">Repository @
+Microsoft GitHub</a></li>
+<li class="nav-item"><a class="nav-link" href=
+"http://tabula.pindorama.net.br/programming">Programming for
+Copacabana (or for the Pindorama Project in general)</a></li>
+<!---->
+<li>
+<p><i><strong>Lights, Copacabana and Action!</strong></i></p>
+</li>
+<li class="nav-item"><a class="nav-link" href=
+"./assets/action/work.html">Workflows running with
+Copacabana</a></li>
+<li class="nav-item"><a class="nav-link" href=
+"./assets/action/sites.html">Websites running on top of
+Copacabana</a></li>
+</ul>
+</div>
+<!-- Scrollspy --></div>
 <!--
-	      You can get its binary tarballs at <a
-		      href="http://pindorama.net.br">Pindorama project</a>
-	      servers, and then install following the documentation
-	      <sub>(soon)</sub>.<h4/>
+               <h2> -> # Title
+               <h3> -> ## Subtitle
+               <p>  -> Plain text
+              -->
+<div class="col-6 col-sm-8 col-md-8 col-xl-10">
+<!-- Spied element -->
+<div data-mdb-spy="scroll" data-mdb-target="#scrollspy1"
+data-mdb-offset="0" class="scrollspy-example">
+<section>
+<h1 class="title-light">The light on Linux®</h1>
+<div id="about" style=
+"margin-top: 20px; margin-left:5px; margin-right:15px;">
+<h2 id="what"><a href="#what">#</a> What?</h2>
+<h4>Copacabana Linux is an independent Linux® distribution focused
+on sanity, modularity and <a href=
+"https://revolution.chnm.org/exhibits/show/liberty--equality--fraternity/enlightenment-and-human-rights">
+liberty (as in Enlightenment)</a>.<br>
+It aims to be a complete, malleable and simple operating system
+solution for use in many environments like workstations, laptops
+and servers.<br>
+It is based on <a href="https://musl.libc.org">musl</a> as the C
+standard library and <a href=
+"http://heirloom-ng.pindorama.net.br">Heirloom NG</a> as
+UNIX®-compatible basic command line utilities.<br>
+<br>
+It uses a *BSD-inspired distribution model — based on stages, not
+on the "everything is a package" paradigm — since it's fairly
+simpler to package, distribute and maintain.</h4>
+<h2 id="how"><a href="#how">#</a> How?</h2>
+<h4>Copacabana is made following the same building model that Linux
+from Scratch/Musl-LFS follows, that is building the distribution in
+three parts: a cross-compiler; a set of basic tools and the final
+system, explaining it in a much more simplified form.<br>
+But, while Linux from Scratch don't in fact have a build
+consolidation, Copacabana makes use of a complete, but yet rather
+simple and hackable, <a href=
+"https://github.com/Projeto-Pindorama/copacabana/blob/copaclang/build.ksh">
+build system</a>.<br>
+If you're interested in building from scratch and/or porting
+Copacabana for other architecture, please read "<a href=
+"#chip-in">Porting Copacabana to other architectures</a>".</h4>
+<h2 id="copy"><a href="#copy">#</a> Download a copy</h2>
+<h4>The newest release is <span id="newest-release"></span>,
+released on <span id="newest-release-date"></span>.<br></h4>
+<!--
+              You can get its binary tarballs at <a
+                      href="http://pindorama.net.br">Pindorama project</a>
+              servers, and then install following the documentation
+              <sub>(soon)</sub>.<h4/>
 <pre>
-	<a href="https://pindorama.net.br/pub/Copacabana" target="_blank">
-	https://pindorama.net.br/pub/Copacabana</a>/X.X
+        <a href="https://pindorama.net.br/pub/Copacabana" target="_blank">
+        https://pindorama.net.br/pub/Copacabana</a>/X.X
 </pre>
 
-	      <h4>Or, if you like terminals:</h4>
+              <h4>Or, if you like terminals:</h4>
 <pre>
-	$ lynx http://pindorama.net.br/pub/Copacabana/X.X
+        $ lynx http://pindorama.net.br/pub/Copacabana/X.X
 </pre>
 -->
-		<h4>Currently, we don't own any servers, so you may have to keep
-		an eye at the <em><a href="./mirrors.html">Downloads</a></em> page.<br />
-		In any case, the GitHub release page is a safe bet:</h4>
-		<pre>
-		<a href="https://github.com/Projeto-Pindorama/copacabana/releases" target="_blank">
-		https://github.com/Projeto-Pindorama/copacabana/releases</a>/tag/X.X
-		</pre>
-		<h4>Do you have a server and want to mirror Copacabana releases?
-			See the "<a href="#chip-in">Chip in!</a>" section and
-		<a href="https://github.com/Projeto-Pindorama/copacabana-www/labels/mirror">
-				send us a issue</a>.
-		<h4>Of course, you can also clone the git repository and build
-		it from source using the build system scripts &mdash; please,
-		take a read at "<a href="#chip-in">Porting Copacabana to other
-		architectures</a>".</h4>
+<h4>Currently, we don't own any servers, so you may have to keep an
+eye at the <em><a href="./mirrors.html">Downloads</a></em>
+page.<br>
+In any case, the GitHub release page is a safe bet:</h4>
 <pre>
-	$ git clone -b [X.X|master] https://github.com/Projeto-Pindorama/copacabana.git
+                <a href=
+"https://github.com/Projeto-Pindorama/copacabana/releases" target=
+"_blank">
+                https://github.com/Projeto-Pindorama/copacabana/releases</a>/tag/X.X
+                </pre>
+<h4>Do you have a server and want to mirror Copacabana releases?
+See the "<a href="#chip-in">Chip in!</a>" section and <a href=
+"https://github.com/Projeto-Pindorama/copacabana-www/labels/mirror">
+send us a issue</a>.</h4>
+Of course, you can also clone the git repository and build it from
+source using the build system scripts — please, take a read at
+"<a href="#chip-in">Porting Copacabana to other architectures</a>".
+<pre>
+        $ git clone -b [X.X|master] https://github.com/Projeto-Pindorama/copacabana.git
 </pre>
-	      <h2 id="chip-in"><a href="#chip-in">#</a> Chip in!</h2>
-              <h4>We can't do this alone. Here are ways of how can
-                <u>you</u> chip in.
-              </h4>
-              
-	      <h3><b><span style="color: #6566a0">##</span> Translate
-                  our content</b></h3>
-              <h4>Speaks something besides the King's English? Português? Español?
-		Català? Français? Italiano? Suomi? 日本語? 繁體字? <span dir="rtl">أَنْدَلُسِيّ؟</span> עברית?<br />
-		Chip in to internationalize our software and documentation!<br />
-                Everything is public in our repositories. Yeah,
-                that's right: no closed groups, sub-projects
-                nor mailing lists.<br />
-                It's just a matter of translating and pull-requesting it.</h4>
-
-	      <h3><b><span style="color: #6566a0">##</span> Porting Copacabana to
-			      other architectures</b></h3>
-	      <h4>Copacabana main focus is to be a multi-purpose
-		      Linux&reg;-based and UNIX&reg;-compatible
-	      operating system and, after all, to be running in multiple places
-	      over the World.<br />And <u>you</u> can help us to achieve this
-	      porting Copacabana to other architectures.<br />
-	      <h4>Currently, Copacabana is getting binary releases for x64; our
-		      current goal is to get binary releases for ARM and i386
-		      (x86) architectures.</h4>
-	      <figure>
-	      	<img src="./assets/styles/img/porting_432x333.png">
-	      </figure>
-	      <h4>Recompiling Copacabana for another host isn't something extremely
-	      hard, since, besides all the scripts and patches are open at the
-	      git repository, the process itself is being described in more depth at the
-	      <a href="http://tabula.pindorama.net.br/copacabana">
-		      Copacabana tabula</a>, with additional sidenotes and
-	      troubleshooting.<br />If you've made a port, you can announce it
-	      at the Pindorama mailing list at FreeLists.org.</h4>
-	      
-	      <h3><b><span style="color: #6566a0">##</span> Spread the word around!</b></h3>
-              <h4>We strongly encourage that you use these badges freely, both in the 'net
-                or in the real life.</h4>
-              <h4>Put them in your website, stick them on your
-                workstation or laptop, use it freely within
-                the bounds of good taste and common sense.</h4>
-              <h4>If you're going to use these in your website, you may
-                wish to take 110x35px badges to embed in the
-                footer, or, if you're going to put in some
-                article, the 256 colours version, which is far
-                smaller than the full version and don't have a
-                significant loss.<h4>
-                  <figure>
-                    <img class="badge-preview" src="./assets/styles/img/COPACABANA/badges/256/COPACABANA_x64-256.PNG">
-                    <figcaption><a href="./assets/styles/img/COPACABANA/badges/FULL/COPACABANA_x64-FULL.PNG">[Full]</a>
-                      <a
-				      href="./assets/styles/img/COPACABANA/badges/256/COPACABANA_x64-256.PNG">[256
-				      colours]</a> <a
-                        href="./assets/styles/img/COPACABANA/badges/256.110x35/COPACABANA_x64-256.110x35.PNG">[Badge
-                        (110x35px)]</a></figcaption>
-                  </figure>
-                  <figure>
-                    <img class="badge-preview" src="./assets/styles/img/COPACABANA/badges/256/COPACABANA_x86-256.PNG">
-                    <figcaption><a href="./assets/styles/img/COPACABANA/badges/FULL/COPACABANA_x86-FULL.PNG">[Full]</a>
-                      <a
-				      href="./assets/styles/img/COPACABANA/badges/256/COPACABANA_x86-256.PNG">[256
-				      colours]</a> <a
-                        href="./assets/styles/img/COPACABANA/badges/256.110x35/COPACABANA_x86-256.110x35.PNG">[Badge
-                        (110x35px)]</a></figcaption>
-                  </figure>
-                  <figure>
-                    <img class="badge-preview" src="./assets/styles/img/COPACABANA/badges/256/COPACABANA_ARM-256.PNG">
-                    <figcaption><a href="./assets/styles/img/COPACABANA/badges/FULL/COPACABANA_ARM-FULL.PNG">[Full]</a>
-                      <a
-				      href="./assets/styles/img/COPACABANA/badges/256/COPACABANA_ARM-256.PNG">[256
-				      colours]</a> <a
-                        href="./assets/styles/img/COPACABANA/badges/256.110x35/COPACABANA_ARM-256.110x35.PNG">[Badge
-                        (110x35px)]</a></figcaption>
-                  </figure>
-		  <h4>Have you been using some of them? <a
-                      href="https://github.com/Projeto-Pindorama/copacabana/issues">Tell
-		      us about</a>.</h4>
-			  <small>(Still likes the oldies, old sock? We
-	      still have 'em around <a
-						    href="https://github.com/Projeto-Pindorama/artworks/tree/master/Adesivo%20Pindorama%20Copacabana/antigas">here</a>)</small>
-
-		  <h2 id="media"><a href="#media">#</a> On the media!</h2>
-                  <h4>Sometimes we get media coverage, take a look.</h4>
-
-		  <h3><b><span style="color: #6566a0">##</span> January 2024</b></h3>
-                    <li><a href="https://www.youtube.com/watch?v=uMzbVBpjFiM">
-			<i>Interview with Glaucus Linux author: Firas Khana</i></a>,
-			Toca do Tux, 13th January 2024</li>
-                    <h4>This time, Prof. Silveira interviews Firas Khalil Khana (<tt>firasuke</tt>) about the
-			<a href="https://glaucuslinux.org">glaucus project</a> &mdash;
-			with which Pindorama <a
-			href="https://github.com/Projeto-Pindorama/mussel/commit/794e0739013625689d04dc678ddb2228dd77dbee">
-			has been cooperating since October 2023</a> and intends to continue it further
-			&mdash; and Copacabana is cited as one of the systems utilizing the <a
-			href="http://heirloom-ng.pindorama.net.br">Heirloom Toolchest NG</a>.</h4>                  
-		  <h3><b><span style="color: #6566a0">##</span> December 2023</b></h3>
-                    <li><a href="https://github.com/firasuke/awesome.git"><i>firasuke/awesome: A curated list of awesome projects</i></a>,
-			    <tt>firasuke</tt>'s GitHub account, 9th December 2023</li>
-                    <h4>Copacabana is one of the projects on the list, which is
-			    awesome.<br />Got it? "Awesome", "awesome lists"...
-			    Perhaps this isn't so funny as I thought.</h4>
-		  <h3><b><span style="color: #6566a0">##</span> January 2022</b></h3>
-                    <li><a href="https://www.youtube.com/watch?v=Q-X7cPsuPlE"><i>Conheça o projeto #Pindorama</i></a>,
-                      Toca do Tux, 23th January 2022</li>
-                    <h4>The professor and systems administrator Gabriel Silveira interviews Luiz Antônio about the
-                      Pindorama project, the Copacabana distribution and his views on licenses, competition and
-                      alternatives currently being used in the distribution.</h4>
-
-	     </div>
-          </section>
-        </div>
-        <!-- Spied element -->
-      </div>
-    </div>
-  </main>
-  <!-- Footer -->
-  <section class="">
-    <!-- Footer -->
-    <footer class="text-black" style="background-color: #fff; border-top: 1px solid black;">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: CTA -->
-        <section class="">
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="footer-text me-3">Website originally created and designed by Vitor S. Almeida,
-		    rewrote by Luiz Antônio and Leonardo Rafael.<br>
-		    Graphics made by <a href="https://github.com/asriel8691">Asriel</a>,
-		    <a
-			    href="https://www.youtube.com/channel/UCQVzi7rdAdFPgWSm_DkNUdA">
-			    Sans</a> and Kayo Henrique.<br> 
-	      <b>Have a critique? Click <a
-			      href="https://github.com/Projeto-Pindorama/copacabana-www/issues"><u>here</u></a>.<b></span>
-          </p>
-        </section>
-        <!-- Section: CTA -->
-      </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-	      © 2019-2025 Copyright: <a href="https://pindorama.net.br/">Pindorama</a><br>
-	Linux&reg; is a registered trademark of Linus Torvalds in the
-	U.S.A. and other countries.<br>
-	UNIX&reg; is a registered trademark of The Open Group in the
-	U.S.A. and other countries.
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-  </section>
-  <!-- Footer -->
-
-
-
-
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
+<h2 id="chip-in"><a href="#chip-in">#</a> Chip in!</h2>
+<h4>We can't do this alone. Here are ways of how can <u>you</u>
+chip in.</h4>
+<h3><b><span style="color: #6566a0">##</span> Translate our
+content</b></h3>
+<h4>Speaks something besides the King's English? Português?
+Español? Català? Français? Italiano? Suomi? 日本語? 繁體字? <span dir=
+"rtl">أَنْدَلُسِيّ؟</span> עברית?<br>
+Chip in to internationalize our software and documentation!<br>
+Everything is public in our repositories. Yeah, that's right: no
+closed groups, sub-projects nor mailing lists.<br>
+It's just a matter of translating and pull-requesting it.</h4>
+<h3><b><span style="color: #6566a0">##</span> Porting Copacabana to
+other architectures</b></h3>
+<h4>Copacabana main focus is to be a multi-purpose Linux®-based and
+UNIX®-compatible operating system and, after all, to be running in
+multiple places over the World.<br>
+And <u>you</u> can help us to achieve this porting Copacabana to
+other architectures.<br></h4>
+Currently, Copacabana is getting binary releases for x64; our
+current goal is to get binary releases for ARM and i386 (x86)
+architectures.
+<figure><img src=
+"./assets/styles/img/porting_432x333.png"></figure>
+<h4>Recompiling Copacabana for another host isn't something
+extremely hard, since, besides all the scripts and patches are open
+at the git repository, the process itself is being described in
+more depth at the <a href=
+"http://tabula.pindorama.net.br/copacabana">Copacabana tabula</a>,
+with additional sidenotes and troubleshooting.<br>
+If you've made a port, you can announce it at the Pindorama mailing
+list at FreeLists.org.</h4>
+<h3><b><span style="color: #6566a0">##</span> Spread the word
+around!</b></h3>
+<h4>We strongly encourage that you use these badges freely, both in
+the 'net or in the real life.</h4>
+<h4>Put them in your website, stick them on your workstation or
+laptop, use it freely within the bounds of good taste and common
+sense.</h4>
+<h4>If you're going to use these in your website, you may wish to
+take 110x35px badges to embed in the footer, or, if you're going to
+put in some article, the 256 colours version, which is far smaller
+than the full version and don't have a significant loss.</h4>
+<figure><img class="badge-preview" src=
+"./assets/styles/img/COPACABANA/badges/256/COPACABANA_x64-256.PNG">
+<figcaption><a href=
+"./assets/styles/img/COPACABANA/badges/FULL/COPACABANA_x64-FULL.PNG">
+[Full]</a> <a href=
+"./assets/styles/img/COPACABANA/badges/256/COPACABANA_x64-256.PNG">[256
+colours]</a> <a href=
+"./assets/styles/img/COPACABANA/badges/256.110x35/COPACABANA_x64-256.110x35.PNG">
+[Badge (110x35px)]</a></figcaption>
+</figure>
+<figure><img class="badge-preview" src=
+"./assets/styles/img/COPACABANA/badges/256/COPACABANA_x86-256.PNG">
+<figcaption><a href=
+"./assets/styles/img/COPACABANA/badges/FULL/COPACABANA_x86-FULL.PNG">
+[Full]</a> <a href=
+"./assets/styles/img/COPACABANA/badges/256/COPACABANA_x86-256.PNG">[256
+colours]</a> <a href=
+"./assets/styles/img/COPACABANA/badges/256.110x35/COPACABANA_x86-256.110x35.PNG">
+[Badge (110x35px)]</a></figcaption>
+</figure>
+<figure><img class="badge-preview" src=
+"./assets/styles/img/COPACABANA/badges/256/COPACABANA_ARM-256.PNG">
+<figcaption><a href=
+"./assets/styles/img/COPACABANA/badges/FULL/COPACABANA_ARM-FULL.PNG">
+[Full]</a> <a href=
+"./assets/styles/img/COPACABANA/badges/256/COPACABANA_ARM-256.PNG">[256
+colours]</a> <a href=
+"./assets/styles/img/COPACABANA/badges/256.110x35/COPACABANA_ARM-256.110x35.PNG">
+[Badge (110x35px)]</a></figcaption>
+</figure>
+<h4>Have you been using some of them? <a href=
+"https://github.com/Projeto-Pindorama/copacabana/issues">Tell us
+about</a>.</h4>
+<small>(Still likes the oldies, old sock? We still have 'em around
+<a href=
+"https://github.com/Projeto-Pindorama/artworks/tree/master/Adesivo%20Pindorama%20Copacabana/antigas">
+here</a>)</small>
+<h2 id="media"><a href="#media">#</a> On the media!</h2>
+<h4>Sometimes we get media coverage, take a look.</h4>
+<h3><b><span style="color: #6566a0">##</span> January 2024</b></h3>
+<ul>
+<li><a href=
+"https://www.youtube.com/watch?v=uMzbVBpjFiM"><i>Interview with
+Glaucus Linux author: Firas Khana</i></a>, Toca do Tux, 13th
+January 2024</li>
+<h4>This time, Prof. Silveira interviews Firas Khalil Khana
+(<tt>firasuke</tt>) about the <a href=
+"https://glaucuslinux.org">glaucus project</a> — with which
+Pindorama <a href=
+"https://github.com/Projeto-Pindorama/mussel/commit/794e0739013625689d04dc678ddb2228dd77dbee">
+has been cooperating since October 2023</a> and intends to continue
+it further — and Copacabana is cited as one of the systems
+utilizing the <a href=
+"http://heirloom-ng.pindorama.net.br">Heirloom Toolchest
+NG</a>.</h4>
+<h3><b><span style="color: #6566a0">##</span> December
+2023</b></h3>
+<li><a href=
+"https://github.com/firasuke/awesome.git"><i>firasuke/awesome: A
+curated list of awesome projects</i></a>, <tt>firasuke</tt>'s
+GitHub account, 9th December 2023</li>
+<h4>Copacabana is one of the projects on the list, which is
+awesome.<br>
+Got it? "Awesome", "awesome lists"... Perhaps this isn't so funny
+as I thought.</h4>
+<h3><b><span style="color: #6566a0">##</span> January 2022</b></h3>
+<li><a href=
+"https://www.youtube.com/watch?v=Q-X7cPsuPlE"><i>Conheça o projeto
+#Pindorama</i></a>, Toca do Tux, 23th January 2022</li>
+<h4>The professor and systems administrator Gabriel Silveira
+interviews Luiz Antônio about the Pindorama project, the Copacabana
+distribution and his views on licenses, competition and
+alternatives currently being used in the distribution.</h4>
+</ul>
+</div>
+</section>
+</div>
+<!-- Spied element --></div>
+</div>
+</main>
+<!-- Footer -->
+<section class=""><!-- Footer -->
+<footer class="text-black" style=
+"background-color: #fff; border-top: 1px solid black;">
+<!-- Grid container -->
+<div class="container p-4 pb-0"><!-- Section: CTA -->
+<section class="">
+<p class="d-flex justify-content-center align-items-center">
+<span class="footer-text me-3">Website originally created and
+designed by Vitor S. Almeida, rewrote by Luiz Antônio and Leonardo
+Rafael.<br>
+Graphics made by <a href=
+"https://github.com/asriel8691">Asriel</a>, <a href=
+"https://www.youtube.com/channel/UCQVzi7rdAdFPgWSm_DkNUdA">Sans</a>
+and Kayo Henrique.<br>
+<b>Have a critique? Click <a href=
+"https://github.com/Projeto-Pindorama/copacabana-www/issues"><u>here</u></a>.</b></span></p>
+</section>
+<!-- Section: CTA --></div>
+<!-- Grid container -->
+<!-- Copyright -->
+<div class="text-center p-3" style=
+"background-color: rgba(0, 0, 0, 0.2);">© 2019-2025 Copyright:
+<a href="https://pindorama.net.br/">Pindorama</a><br>
+Linux® is a registered trademark of Linus Torvalds in the U.S.A.
+and other countries.<br>
+UNIX® is a registered trademark of The Open Group in the U.S.A. and
+other countries.</div>
+<!-- Copyright --></footer>
+<!-- Footer --></section>
+<!-- Footer -->
+<!-- MDB -->
+<script type="text/javascript" src=
+"https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
 </body>
-
 </html>

@@ -13,52 +13,66 @@
     src: url(/assets/styles/fonts/courierprime-regular-webfont.woff) format('woff');
 }
 
-*{
+* {
     box-sizing: unset;
 }
 
-html, body{
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, lucida_sans_unicoderegular, coolveticaregular;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    		Helvetica, Arial, lucida_sans_unicoderegular, coolveticaregular;
 }
 
-.footer-text{
+.footer-text {
     text-align: right;
 }
 
-code, pre, tt {
+code,
+pre,
+tt {
     font-family: "Courier Prime", courierprime-regular, "Courier New", monospace;
 }
 
-code, pre {
-	color: #000000;
+code,
+pre {
+    color: #000000;
 }
 
-p{
-    margin-bottom: 0!important;
-    margin-top: 0.5rem!important;
+p {
+    margin-bottom: 0 !important;
+    margin-top: 0.5rem !important;
 }
+
 a {
     color: #6566a0;
     text-decoration: none;
     background-color: transparent;
 }
+
 a:hover {
     color: #0056b3;
     text-decoration: underline;
 }
 
-h2 { 
+h2 {
     font-weight: bold;
 }
 
-h2, h3, h4, h5, p, li, figure, small {
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+figure,
+small {
     color: black;
 }
 
 li {
-  list-style-type: circle;
+    list-style-type: circle;
 }
 
 h4 {
@@ -70,44 +84,51 @@ h4 {
     position: relative;
     height: 100%;
 }
-.header-links-direita a{
+
+.header-links-direita a {
     font-size: 20px;
     margin-right: 1rem;
     color: #4D4D4F;
 }
-#scrollspy1{
+
+#scrollspy1 {
     height: 100%;
     border-right: solid #cacaca;
 }
-#scrollspy1 li{
+
+#scrollspy1 li {
     margin-left: 1rem;
 }
+
 .badge-preview {
-	width: 355px;
-	height: 105px;
+    width: 355px;
+    height: 105px;
 }
+
 .tab-logo {
     max-width: 100px;
 }
-.title-light{
-		/* Pindorama's blue */
+
+.title-light {
+    /* Pindorama's blue */
     background-color: #1A3060;
     color: #ffffff;
 }
 
 /* aqui tu adiciona oq tu quer que mude de 768 pra cima*/
-@media (min-width: 768px){
-    *{
+@media (min-width: 768px) {
+    * {
         box-sizing: border-box;
     }
-    .tab-logo{
+
+    .tab-logo {
         max-width: 200px;
     }
 }
 
 /* aqui tu adiciona oq tu quer que mude de 992 pra cima*/
-@media (min-width: 992px){
-    .tab-logo{
+@media (min-width: 992px) {
+    .tab-logo {
         max-width: 250px;
     }
 }
