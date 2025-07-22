@@ -72,7 +72,7 @@ in!</a></li>
 media!</a></li>
 <!---->
 <li>
-<p><i><strong>Documentation</strong></i></p>
+<p><i><strong>Documentation</strong></i><sup>to come</sup></p>
 </li>
 <li class="nav-item"><a class="nav-link" href=
 "http://copacabana.pindorama.net.br/faq/">F.A.Q</a></li>
@@ -119,17 +119,21 @@ data-mdb-offset="0" class="scrollspy-example">
 on sanity, modularity and <a href=
 "https://revolution.chnm.org/exhibits/show/liberty--equality--fraternity/enlightenment-and-human-rights">
 liberty (as in Enlightenment)</a>.<br>
-It aims to be a complete, malleable and simple operating system
-solution for use in many environments like workstations, laptops
-and servers.<br>
-It is based on <a href="https://musl.libc.org">musl</a> as the C
-standard library and <a href=
-"http://heirloom-ng.pindorama.net.br">Heirloom NG</a> as
-UNIX®-compatible basic command line utilities.<br>
+It aims to be a complete, malleable and yet simple operating system
+solution for use in diverse environments, such as workstations,
+laptops and servers.<br>
+We, since the first day of development, drew
+inspiration from paradigms used for many years for designing stable
+operating systems, therefore, even though many of the utilities that
+are present on Copacabana being new/newly maintained, all of it are
+being made aiming for trustability.<br>
 <br>
-It uses a *BSD-inspired distribution model — based on stages, not
-on the "everything is a package" paradigm — since it's fairly
-simpler to package, distribute and maintain.</h4>
+For distribution, we use a *BSD-inspired model — based on stages,
+not on the "everything is a package" paradigm — for some general
+parts (e.g.: base system), since it's fairly simpler to package,
+distribute and maintain.<br>
+For other packages, a new approach based on the SVR4 packaging
+model is being currently developed.</h4>
 <h2 id="how"><a href="#how">#</a> How?</h2>
 <h4>Copacabana is made following the same building model that Linux
 from Scratch/Musl-LFS follows, that is building the distribution in
@@ -213,7 +217,9 @@ more depth at the <a href=
 "http://tabula.pindorama.net.br/copacabana">Copacabana tabula</a>,
 with additional sidenotes and troubleshooting.<br>
 If you've made a port, you can announce it at the Pindorama mailing
-list at FreeLists.org.</h4>
+list at FreeLists.org or, preferably, via an issue at the Copacabana
+development repository using the "<span style="background-color:
+#E4A35D; color: #000000;">port</span>" label.</h4>
 <h3><b><span style="color: #6566a0">##</span> Spread the word
 around!</b></h3>
 <h4>We strongly encourage that you use these badges freely, both in
